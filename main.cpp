@@ -166,7 +166,7 @@ void generateCodes(int root, string codes[]) {
         }
     }
     // Process is complete.
-    cout << "Codes are generated.\n";
+    cout << "Codes successfully generated.\n";
 }
 
 // Step 5: Print table and encoded message
