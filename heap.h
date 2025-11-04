@@ -16,10 +16,10 @@ struct MinHeap {
 
     void push(int idx, int weightArr[]) {
         if (size < 64) {
-            //Inserts a new node at the end of heap array
+            //Inserts a new node at the end of heap array.
             data[size] = idx;
             size++;
-            // Restores the order using upheap, beginning from the new position
+            // Restores the order using upheap, beginning from the new position.
             upheap(size -1,weightArr);
         }
     }
@@ -70,7 +70,7 @@ struct MinHeap {
             int leftChild = 2 * pos + 1;
             int rightChild = 2 * pos + 2;
             // Stores the element with the smallest weight as 'smallest' from the listed elements of
-            // parent, left child, and right child. It starts with parent as smallest and will precede to check for the smallest value from the rest of the elements
+            // parent, left child, and right child. It starts with parent as smallest and will precede to check for the smallest value from the rest of the elements.
             int smallest = parent;
 
             // Checks if there is a left child and if the weight is smaller than the smallest weight set at parent.

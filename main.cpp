@@ -127,14 +127,11 @@ int buildEncodingTree(int nextFree) {
 
 // Step 4: Use an STL stack to generate codes
 void generateCodes(int root, string codes[]) {
-    // TODO:
     // Use stack<pair<int, string>> to simulate DFS traversal.
     stack<pair<int, string>> s;
-
     // Left edge adds '0', right edge adds '1'.
     // Record code when a leaf node is reached.
-
-    // Initializes DFS from the root with an empty code string
+    // Initializes DFS from the root with an empty code string.
     s.push({root, ""});
 
     // Continues processing as long as there are existing nodes in the stack.
@@ -150,9 +147,8 @@ void generateCodes(int root, string codes[]) {
         if (leftArr[currentNodeIndex] == -1 && rightArr[currentNodeIndex] == -1) {
             // Obtains the character stored at leaf node.
             char c = charArr[currentNodeIndex];
-            // Checks if the character is a lowercase letter within the alphabet.
+            // Creates an array storing the Huffman code
             if (c >= 'a' && c <= 'z') {
-                // Creates an array storing the Huffman code.
                 codes[c - 'a'] = currentNode;
             }
             // As the leaf is processed, move on to the next objective in the stack which is to backtrack.
